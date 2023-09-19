@@ -63,11 +63,11 @@ def main():
     if authentication_status:
         st.title("Glaucoma Detector")
         st.markdown("**Accuracies of Various Models :**")
-        data = {'Models': ['CNN', 'Resnet50', 'MobileNetv2','Vgg16','InceptionV3'],
-            'Accuracy': [68.702, 50.382, 68.103,58.779,72.591],
-            'f1 score' : [70.021, 48.921, 71.087,52.661,72.471],
-            'precision score' : [68.891, 52.032, 69.041,67.153,72.591],
-            'recall score' : [68.802, 51.021, 70.023,58.775,72.553]}
+        data = {'Models': ['CNN', 'CNN 2','Resnet50', 'MobileNetv2','Vgg16','InceptionV3'],
+            'Accuracy': [68.702, ,52.03,65.463, 68.103,58.779,72.591],
+            'f1 score' : [70.021,47.021, 62.451, 71.087,52.661,72.471],
+            'precision score' : [68.891,46.512, 63.209, 69.041,67.153,72.591],
+            'recall score' : [68.802,45.021, 60.054, 70.023,58.775,72.553]}
         df = pd.DataFrame(data)
         df.set_index('Models', inplace=True)
         df.index.name = 'Models'
